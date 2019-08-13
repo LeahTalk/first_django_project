@@ -16,5 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include	# added an import!
 # from django.contrib import admin              # comment out, or just delete
 urlpatterns = [
-    url(r'^', include('apps.first_app.urls')),	# use your app_name here
+    url(r'^', include('apps.first_app.urls')),
+    url(r'^blogs/', include('apps.first_app.urls')),	# use your app_name here
+    url(r'^surveys/', include('apps.surveys.urls')),
+    url(r'^', include('apps.users.urls')),
 ]
